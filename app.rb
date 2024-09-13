@@ -26,12 +26,12 @@ post '/visit' do
 	@barber = params[:barber]
 
 
-	f = File.open "public/users.txt", "a"
-	f.write "User: #{@username}, Phone: #{@phone}, barber: #{@barber}, Date, time: #{@datetime} \n"
-	f.close
+	#f = File.open "public/users.txt", "a"
+	#f.write "User: #{@username}, Phone: #{@phone}, barber: #{@barber}, Date, time: #{@datetime} \n"
+	#f.close
 
-
-	erb :visit
+	erb "User: #{@username}, Phone: #{@phone}, barber: #{@barber}, Date, time: #{@datetime} \n"
+	#erb :visit
 end
 
 
